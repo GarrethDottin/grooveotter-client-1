@@ -1,0 +1,143 @@
+$gotr-background: #fdfdfd;
+$gotr-foreground: #333333;
+$gotr-error: #b5616b;
+
+$gotr-white: #ffffff;
+$gotr-offwhite: #f5f6f6;
+$gotr-offoffwhite: #ededed;
+$gotr-subtle: #dbdcdc;
+$gotr-grey: #989cad;
+$gotr-offgrey: #8e92a2;
+$gotr-offoffgrey: #7e9ab4;
+$gotr-offoffoffgrey: #cfd9e3;
+$gotr-black: #444444;
+
+$gotr-primary: #314D5E;
+$gotr-tab: #37B386;
+$gotr-offprimary: #4a657d;
+$gotr-secondary: #3ABF8D;
+$gotr-offsecondary: #9ecab0;
+
+$gotr-row-padding: 30px;
+$gotr-row-width: 940px;
+$gotr-row-cutoff: $gotr-row-width + (2 * $gotr-row-padding);
+$gotr-row-left-panel-width: 700px;
+$gotr-row-left-panel-cutoff: $gotr-row-left-panel-width + (2 * $gotr-row-padding);
+$gotr-row-right-panel-width: 200px;
+$gotr-row-right-panel-cutoff: $gotr-row-right-panel-width + (2 * $gotr-row-padding);
+
+html {
+    font-family: azo-sans-web, sans-serif;
+    background: $gotr-background;
+    color: $gotr-foreground;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+input, button {
+    background-color: inherit;
+    color: inherit;
+    border: 0;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+}
+
+.gotr-button {
+    border-radius: 4px;
+    color: $gotr-white;
+    font-weight: 700;
+    transition: background-color 100ms ease;
+
+    &.gotr-button-primary {
+        background: $gotr-primary;
+
+        &:hover:not(:disabled) {
+            background: darken($gotr-primary, 10%);
+        }
+    }
+
+    &.gotr-button-secondary {
+        background: $gotr-secondary;
+
+        &:hover:not(:disabled) {
+            background: darken($gotr-secondary, 10%);
+        }
+    }
+
+    &.gotr-button-nav {
+        border: 1px solid $gotr-subtle;
+        color: $gotr-grey;
+
+        &:hover:not(:disabled) {
+            background: rgba(0, 0, 0, 0.025);
+        }
+    }
+}
+
+.gotr-checkbox {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    background: url(/rest.png) no-repeat 0 0;
+    display: inline-block;
+}
+
+.gotr-checkbox.gotr-checkbox-checked, .gotr-checkbox:hover {
+    background: url(/checked.png) no-repeat 0 0;
+}
+
+.gotr-checkbox:hover {
+    cursor: pointer;
+}
+
+.gotr-shadow {
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.gotr-shadow2 {
+    background: rgba(0, 0, 0, 0);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

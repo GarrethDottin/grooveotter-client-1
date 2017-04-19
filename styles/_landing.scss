@@ -1,0 +1,544 @@
+@import '../node_modules/slick-carousel/slick/slick';
+
+.gotrl-top {
+    background-image: url(/landing-background.jpg);
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    clip: rect(auto, auto, auto, auto);
+
+    .gotrl-top-content {
+        display: table;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        left: 0;
+        position: absolute;;
+        right: 0;
+        top: 0;
+    }
+}
+
+.gotrl-top-container {
+    height: 100vh;
+    position: relative;
+}
+
+.gotrl-panel {
+    position: relative;
+    padding: 120px 30px;
+    overflow: hidden;
+
+    .gotrl-panel-top, .gotrl-panel-bottom {
+        height: 60px;
+        left: 0;
+        position: absolute;
+        right: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .gotrl-panel-top {
+        top: 0;
+    }
+
+    .gotrl-panel-bottom {
+        bottom: 0;
+    }
+
+    .gotrl-panel-content {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+}
+
+.gotrl-top-pointer {
+    bottom: 0;
+    height: 75px;
+    left: 0;
+    line-height: 75px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    img {
+        display: inline-block;
+        height: 20px;
+        transition: transform 500ms ease-in-out;
+        vertical-align: middle;
+        width: 20px;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+#gotrl-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $gotr-white;
+    box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+
+    .gotrl-navbar-content {
+        padding: 15px 40px;
+        overflow: hidden;
+
+        img {
+            max-height: 40px;
+        }
+
+        .gotrl-login-button {
+            background: $gotr-secondary;
+
+            &:hover {
+                background: $gotr-secondary;
+            }
+        }
+    }
+}
+
+.gotrl-top-navbar {
+    left: 0;
+    overflow: hidden;
+    padding: 15px 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    max-height: 70px;
+
+    img {
+        max-height: 40px;
+    }
+}
+
+.gotrl-navbar-left {
+    float: left;
+    max-height: 40px;
+}
+
+.gotrl-navbar-right {
+    float: right;
+    max-height: 40px;
+}
+
+.gotrl-hero {
+    color: $gotr-white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    h1 {
+        margin: 50px 0 0;
+        font-size: 60px;
+        font-weight: normal;
+        letter-spacing: -0.1rem;
+    }
+
+    h2 {
+        margin: 30px 0 40px 0;
+        font-size: 26px;
+        font-weight: normal;
+    }
+}
+
+.gotrl-login-button {
+    border-radius: 4px;
+    border: 2px solid $gotr-white;
+    box-sizing: border-box;
+    color: $gotr-white;
+    display: inline-block;
+    font-size: 0.875em;
+    height: 40px;
+    letter-spacing: 0.1em;
+    padding: 10px 0.6em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 100ms ease;
+    width: 140px;
+
+    &:hover {
+        background: darken($gotr-secondary, 10%);
+    }
+}
+
+.gotrl-getstarted-button {
+    background: $gotr-secondary;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    color: $gotr-white;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    padding: 1em;
+    text-transform: uppercase;
+    transition: background-color 100ms ease;
+    width: 220px;
+
+    &:hover {
+        background: darken($gotr-secondary, 10%);
+    }
+}
+
+.gotrl-text-block {
+    max-width: 500px;
+
+    h1 {
+        font-size: 48px;
+        line-height: 52px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+#gotrl-panel-two {
+    background: url(/panel2-background.png) no-repeat center / contain $gotr-white;
+
+    & > * {
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        text-align: center;
+        font-size: 34px;
+        line-height: 52px;
+        font-weight: 500;
+        width: 30%;
+        min-width: 400px;
+    }
+}
+
+#gotrl-panel-three {
+    background: $gotr-offwhite;
+
+    .gotrl-panel-bottom {
+        margin-left: 30%;
+    }
+
+    .gotrl-panel-three-left {
+        float: left;
+        margin-right: 80px;
+    }
+
+    .gotrl-panel-three-right {
+        float: left;
+        width: 0;
+
+        video {
+            opacity: 0;
+            margin-left: 700px;
+            max-width: 700px;
+            border-radius: 4px;
+            box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+
+            video {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#gotrl-panel-four {
+    background: $gotr-white;
+
+    .gotrl-panel-top {
+        margin-left: 30%;
+    }
+
+    .gotrl-panel-four-left {
+        float: left;
+        margin-right: 110px;
+        max-width: 330px;
+        width: 100%;
+
+        img {
+            display: block;
+            margin-left: -500px;
+            opacity: 0;
+        }
+
+        @media screen and (max-width: 1000px) {
+            float: none;
+            margin: 0;
+            width: 100%;
+            max-width: none;
+
+            img {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .gotrl-panel-four-right {
+        float: left;
+    }
+}
+
+#gotrl-panel-social {
+    background: $gotr-offwhite;
+
+    .gotrl-panel-social-left {
+        float: left;
+    }
+    .gotrl-panel-content {
+        max-width: 1090px;
+        width: 1267px;
+        padding-left: 120px;
+    }
+    .gotrl-panel-social-right {
+        float: left;
+        max-width: 430px;
+        width: 100%;
+        margin-left: 70px;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-left: 700px;
+            opacity: 0;
+            width: 100%;
+        }
+    }
+}
+
+#gotrl-panel-five {
+    background: $gotr-secondary;
+
+    .gotrl-panel-top {
+        height: 120px;
+    }
+
+    .gotrl-panel-content {
+        margin: 0 auto;
+    }
+
+    .gotrl-panel-five-icon {
+        display: block;
+        border: 3px solid $gotr-white;
+        box-sizing: border-box;
+        border-radius: 100%;
+        margin: 0 auto;
+        width: 80px;
+    }
+
+    .gotrl-panel-five-text {
+        color: $gotr-white;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .gotrl-panel-five-name {
+        color: $gotr-white;
+        text-align: center;
+    }
+
+    ul.slick-dots {
+        margin: 0 auto;
+        text-align: center;
+        li {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 100%;
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+
+            & + li {
+                margin-left: 10px;
+            }
+
+            &.slick-active {
+                background: rgba(255, 255, 255, 0.9);
+            }
+
+            button {
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#gotrl-panel-six {
+    background: $gotr-primary;
+    color: $gotr-white;
+    text-align: center;
+
+    .gotrl-panel-six-calltoaction {
+        display: inline-block;
+        font-size: 40px;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .gotrl-getstarted-button {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.gotrl-footer {
+    background: $gotr-white;
+
+    .gotrl-footer-content {
+        margin: 0 auto;
+        max-width: 940px;
+        padding: 60px 30px;
+        text-align: center;
+        overflow: hidden;
+
+        .gotrl-footer-item {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 48px;
+            height: 48px;
+            margin: 0 15px;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-30px);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .gotrl-hero {
+        margin: 0 30px;
+
+        h1 {
+            font-size: 2.25em;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+    }
+
+    .gotrl-top-navbar, #gotrl-navbar .gotrl-navbar-content {
+        padding: 15px;
+
+        .gotrl-login-button {
+            width: 100%;
+            padding: 0.6em 1em;
+        }
+    }
+
+    #gotrl-panel-two {
+        p {
+            font-size: 22px;
+            line-height: 24px;
+            min-width: 300px;
+        }
+    }
+
+    #gotrl-panel-three {
+        .gotrl-panel-three-left {
+            margin: 0;
+        }
+
+        .gotrl-panel-three-right {
+            video {
+                margin: 30px 0 0;
+                opacity: 1;
+            }
+        }
+    }
+
+    .gotrl-text-block {
+        h1 {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    #gotrl-panel-four {
+        .gotrl-panel-content {
+            .gotrl-panel-four-left {
+                img {
+                    margin: 0 0 30px 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #gotrl-panel-five {
+        .gotrl-panel-five-text {
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .gotrl-panel-five-name {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    #gotrl-panel-social {
+        .gotrl-panel-content {
+            padding-left: 0px !important;
+        }
+    }
+
+    #gotrl-panel-six {
+        .gotrl-panel-six-calltoaction {
+            font-size: 32px;
+        }
+    }
+}

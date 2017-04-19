@@ -1,0 +1,120 @@
+.gotr-newsfeed-container {
+    background: $gotr-white;
+    box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.1);
+    min-height: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+
+    &.gotr-newsfeed-hide {
+        opacity: 0;
+    }
+}
+
+.gotr-newsfeed {
+    margin: 0 auto;
+    max-width: $gotr-row-width;
+    overflow: hidden;
+    padding: 10px 15px;
+    transition: opacity .5s ease-in-out;
+
+    &.gotr-newsfeed-locked {
+        opacity: .5;
+    }
+
+    & .gotr-newsfeed-item {
+        max-height: 40px;
+        float: left;
+
+        &.gotr-newsfeed-item-right {
+            float: right;
+        }
+
+        & b {
+            font-weight: 400;
+            color: #080b0d;
+        }
+
+        &.gotr-newsfeed-item-line {
+            position: absolute;
+            margin: 0 75px 0 60px;
+            line-height: 34px;
+
+            .gotr-newsfeed-item-line-text {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+
+                @media screen and (max-width: 480px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &.gotr-newsfeed-item-pic {
+            border-radius: 100%;
+            border: 1px solid $gotr-white;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 40px;
+            margin-right: 10px;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            width: 40px;
+
+            img {
+                max-height: 40px;
+            }
+        }
+
+        & .gotr-newsfeed-like {
+            border-radius: 4px;
+            border: 1px solid $gotr-subtle;
+            box-sizing: border-box;
+            font-weight: 600;
+            height: 40px;
+            width: 60px;
+            padding: 0 10px;
+            text-align: left;
+
+            img {
+                width: 20px;
+            }
+
+            span, img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &.gotr-newsfeed-enter {
+        transform: translateY(-60px);
+        transition: transform 1000ms linear;
+
+        &.gotr-newsfeed-enter-active {
+            transform: translateY(0);
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .gotr-newsfeed-right {
+        display: none;
+    }
+    .gotr-newsfeed {
+        height: 55px;
+    }
+    .gotr-selector-box-input {
+        width: 50%;
+    }
+
+    .gotr-newsfeed-item {
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+
+}

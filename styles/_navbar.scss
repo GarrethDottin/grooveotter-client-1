@@ -1,0 +1,64 @@
+.gotr-nav-top {
+    background: $gotr-primary;
+    overflow: hidden;
+    height: 60px;
+}
+
+.gotr-float-right {
+    float: right;
+}
+
+.gotr-navbar {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 15px;
+
+    & .gotr-navbar-left {
+        float: left;
+    }
+
+    & .gotr-navbar-right {
+        float: right;
+    }
+
+    & .gotr-navbar-item {
+        display: inline-block;
+        max-height: 40px;
+        vertical-align: middle;
+
+        & a {
+            display: inline-block;
+            color: lighten($gotr-primary, 30%);
+            font-weight: 700;
+        }
+
+        &:hover a, &.gotr-navbar-item-active a {
+            color: $gotr-white;
+        }
+
+        .gotr-navbar-item-logo {
+            height: 40px;
+            overflow: hidden;
+
+            @media screen and (max-width: 480px) {
+                width: 40px;
+            }
+        }
+
+        & .gotr-navbar-item-pic {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 40px;
+            border-radius: 100%;
+        }
+
+        & .gotr-navbar-item-logout {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        & + .gotr-navbar-item {
+            padding-left: 15px;
+        }
+    }
+}

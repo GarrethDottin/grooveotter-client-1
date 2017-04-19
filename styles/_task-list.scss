@@ -1,0 +1,102 @@
+.gotr-task-list {
+    margin-top: 15px;
+
+    & .gotr-task {
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        padding: 10px;
+        overflow: hidden;
+
+        & .gotr-task-left {
+            float: left;
+        }
+
+        & .gotr-task-right {
+            display: none;
+            float: right;
+        }
+
+        & .gotr-checkbox {
+            margin: 7px 10px;
+            float: left;
+        }
+
+        & .gotr-task-text {
+            display: inline-block;
+            font-size: 1.125em; // 18px
+            width: 320px;
+            padding: 7px;
+
+            @media screen and (max-width: 480px) {
+                width: 180px;
+            }
+        }
+
+        & .gotr-task-button {
+            font-size: 0.875em; // 14px
+            margin-right: 20px;
+            padding: 10px;
+            width: 110px;
+        }
+
+        & .gotr-task-duration {
+            width: 25px;
+        }
+
+        & .gotr-task-mins {
+            display: inline-block;
+        }
+
+        & .gotr-task-kill {
+            margin: 8px;
+        }
+
+        &:hover, &.gotr-task-active {
+            background: $gotr-white;
+            border-color: $gotr-subtle;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+            & .gotr-task-right {
+                display: block;
+            }
+        }
+
+        &.gotr-task-leave {
+            opacity: 1;
+            transition: 1s 100ms ease all;
+
+            &.gotr-task-leave-active {
+                margin-top: -58px;
+                opacity: 0;
+                transform: translate(5px, 63px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gotr-task-button {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.gotr-task-kill {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    float: right;
+    background: url(/delete.svg) no-repeat 0 0;
+}
+
+.gotr-completed-task {
+    padding: 10px 20px;
+    color: #989cad;
+    display: block;
+    font-size: 1.125em;
+}
+
+.gotr-button-completed {
+    margin-top: 20px;
+    padding: 8px;
+    font-weight: 100px;
+}

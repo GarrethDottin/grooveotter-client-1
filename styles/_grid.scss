@@ -1,0 +1,55 @@
+.gotr-hero {
+    background: $gotr-offwhite;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    & .gotr-row-right-panel, & .gotr-row-left-panel {
+        padding-top: 20px;
+    }
+}
+
+.gotr-wing {
+    margin-bottom: 80px;
+
+    & .gotr-row-right-panel, & .gotr-row-left-panel {
+        padding-top: 40px;
+    }
+}
+
+.gotr-row {
+    margin: 0 auto;
+    max-width: $gotr-row-width;
+    padding: 0 $gotr-row-padding;
+
+    &:after {
+        clear: both;
+    }
+
+    &::after, // weird hacky magic to avoid overflow: hidden
+    &::before {
+        content: "";
+        display: table;
+    }
+
+    & .gotr-row-left-panel, & .gotr-row-right-panel {
+        position: relative;
+        width: 100%;
+    }
+
+    & .gotr-row-left-panel {
+        max-width: $gotr-row-left-panel-width;
+        float: left;
+    }
+
+    & .gotr-row-right-panel {
+        max-width: $gotr-row-right-panel-width;
+        float: right;
+    }
+
+    @media screen and (max-width: $gotr-row-cutoff) {
+        & .gotr-row-left-panel, & .gotr-row-right-panel {
+            float: none;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+input[type=number] {-moz-appearance: textfield;}
+.gotr-taskarea {
+    & .gotr-taskarea-box {
+        box-sizing: border-box;
+        border-bottom: 1px solid $gotr-subtle;
+        font-size: 2em;
+        margin: 30px auto;
+        padding: 10px 0;
+        width: 100%;
+        font-weight: 100;
+
+        &:focus {
+            padding: 18px;
+            margin-bottom: 29px;
+            font-size: 1.25em;
+            font-weight: normal;
+            background: $gotr-white;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+
+            &::-webkit-input-placeholder {
+                color: transparent;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: inherit;
+        }
+    }
+
+    & .gotr-button {
+        width: 195px;
+        padding: 1em 0;
+        color: $gotr-offwhite;
+        font-weight: 400;
+    }
+
+    & .gotr-button-container {
+        display: inline-block;
+
+        @media screen and (min-width: 481px) {
+            &:first-of-type {
+                .gotr-button {
+                    margin: 0 10px 10px 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 0 5px;
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+
+            .gotr-button {
+                width: 100%;
+            }
+        }
+    }
+
+    span {
+        vertical-align: middle;
+    }
+
+    .gotr-taskarea-sharebox {
+        margin: 10px 0;
+        position: relative;
+        display: inline-block;
+
+
+        .gotr-checkbox {
+            margin-right: 7px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .gotr-onboarding-container {
+            left: -100px;
+            right: -100px;
+            margin-top: 5px;
+
+            @media screen and (max-width: 480px) {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: $gotr-row-left-panel-cutoff) {
+        margin: 0 0 25px;
+
+        & .gotr-taskarea-box {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        & .gotr-taskarea-box {
+            font-size: 26px;
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        & .gotr-taskarea-box {
+            font-size: 22px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        & .gotr-taskarea-box {
+            font-size: 20px;
+        }
+    }
+
+    & > .gotr-onboarding-container {
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    .gotr-onboarding-arrows-down {
+        display: none;
+    }
+}
